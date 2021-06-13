@@ -1,0 +1,29 @@
+{
+  "name": "the_coding_test_dylan",
+  "version": "1.0.0",
+  "description": "Node.js Express API serving HE institution data",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "Dylan Irmak",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.2",
+    "express": "^4.17.1",
+    "express-winston": "^4.1.0",
+    "helmet": "^4.6.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.13",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "jest": "^27.0.4",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
+  }
+}
