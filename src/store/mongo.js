@@ -13,7 +13,7 @@ const instituteSchema = new mongoose.Schema({
 
 const submissionsSchema = new mongoose.Schema({
     id: String,
-    insititute_id: String,
+    institution_id: String,
     year: Number,
     students_total: Number,
     undergraduates_total: Number,

@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "name",
+      "address",
+      "country",
+      "region",
+      "id"
+    ],
+    "properties": {
+        "name": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+}
