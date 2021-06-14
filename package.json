@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "start:dev": "nodemon src/index.js",
+    "start:dev": "docker-compose up",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "format": "prettier --single-quote --trailing-comma es5 --write '{src,tests}/**/*.js'"
   },
   "author": "Dylan Irmak",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "express": "^4.17.1",
     "express-winston": "^4.1.0",
     "helmet": "^4.6.0",
+    "jsonschema": "^1.4.0",
     "lodash": "^4.17.21",
     "mongoose": "^5.12.13",
     "winston": "^3.3.3"

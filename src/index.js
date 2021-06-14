@@ -1,7 +1,7 @@
-const { connectDb, addInitialData } = require("./store");
-const logger = require("./logger");
-const server = require("./server");
-const router = require("./api");
+const { connectDb, addInitialData } = require('./store');
+const logger = require('./logger');
+const server = require('./server');
+const router = require('./api');
 
 connectDb()
   .then(() => {

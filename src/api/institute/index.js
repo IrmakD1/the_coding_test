@@ -1,3 +1,3 @@
-const instituteRouter = require('./router')
+const instituteRouter = require('./router');
 
-module.exports = instituteRouter
+module.exports = instituteRouter;
