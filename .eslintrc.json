@@ -1,0 +1,17 @@
+{
+  "extends": ["prettier"],
+  "env": {
+    "jest": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "jsx-a11y/href-no-hash": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_id", "_rev"] }],
+    "import/prefer-default-export": "off",
+    "curly": ["error", "multi", "consistent"]
+  }
+}

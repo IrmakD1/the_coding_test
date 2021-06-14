@@ -12,7 +12,7 @@ const validateInstituteId = async (model, id, body) => {
       if (res.length) throw Error('Id already exists');
     }
   } catch (err) {
-    throw Boom.badGateway('Failed to get data from db', err);
+    throw Boom.badData(err);
   }
 };
 
@@ -81,7 +81,7 @@ const addInstituteData = async (models, body, id = null) => {
       logger.log('info', 'added institution data');
     }
   } catch (err) {
-    throw Boom.badData('Unable to add data', err);
+    throw Boom.badData(`Unable to add data: ${err}`);
   }
 };
 

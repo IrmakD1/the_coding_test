@@ -16,7 +16,7 @@ module.exports = () => {
           )
         : await service.getInstituteData({ Institute, Submission });
 
-      res.status(200).send(data);
+      res.send(data);
     } catch (err) {
       next(err);
     }
@@ -36,7 +36,7 @@ module.exports = () => {
             id: req.params.id,
           });
 
-      res.status(200).send(data);
+      res.send(data);
     } catch (err) {
       next(err);
     }
@@ -45,7 +45,7 @@ module.exports = () => {
   router.post('/', validate(instituteSchema), async (req, res, next) => {
     try {
       await service.addInstituteData({ Institute, Submission }, req.body);
-      res.status(200).send('Document successfully added');
+      res.send('Document successfully added');
     } catch (err) {
       next(err);
     }
@@ -58,7 +58,7 @@ module.exports = () => {
         req.body,
         req.params.id
       );
-      res.status(200).send('Document successfully added');
+      res.send('Document successfully added');
     } catch (err) {
       next(err);
     }

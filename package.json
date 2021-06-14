@@ -4,10 +4,11 @@
   "description": "Node.js Express API serving HE institution data",
   "main": "index.js",
   "scripts": {
+    "start:docker": "docker-compose -f docker-compose.yaml up -d && docker logs data-service -tf",
     "start": "node src/index.js",
-    "start:dev": "docker-compose up",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "lint": "eslint src",
     "format": "prettier --single-quote --trailing-comma es5 --write '{src,tests}/**/*.js'"
   },
   "author": "Dylan Irmak",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "eslint": "^7.28.0",
+    "eslint-config-prettier": "2.4.0",
     "jest": "^27.0.4",
     "nodemon": "^2.0.7",
     "prettier": "^2.3.1"
