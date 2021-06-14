@@ -21,6 +21,6 @@ describe('router', () => {
 
   test('should call router.use for institutions', () => {
     expect(result.use).toHaveBeenCalled();
-    expect(result.use.mock.calls[0][0]).toBe('/institutions');
+    expect(result.use.mock.calls[0][0]).toBe('/');
   });
 });

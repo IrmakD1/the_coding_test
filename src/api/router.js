@@ -3,7 +3,7 @@ const instituteRouter = require('./institute');
 
 module.exports = () => {
   const router = Router();
-  router.use('/institutions', instituteRouter());
+  router.use('/', instituteRouter());
 
   return router;
 };

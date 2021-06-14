@@ -28,7 +28,9 @@ const joinLatestSubmissionData = async (institutions, Submission) => {
           sort: { year: -1 },
           limit: 1,
         }
-      );
+      )
+      
+    //   console.log('/////', submission[0].toObject());
       const filteredSubmission = _.omit(submission[0].toObject(), [
         'id',
         '_id',
@@ -50,7 +52,7 @@ const getInstituteData = async (models, complete = false, query = {}) => {
 
   try {
     if (complete === 'true') {
-      const institutions = await models.Institute.find(query).lean();
+      const institutions = await models.Institute.find(query, '', { lean: true });
 
       data = joinLatestSubmissionData(institutions, models.Submission);
     } else {
