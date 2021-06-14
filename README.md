@@ -27,7 +27,13 @@ or
 npm run start:docker
 ```
 
-This will spin up the app with the docker-compose.yaml and run the app's start command, which will connect to the MongoDb and and upload the institution and submission data found in the ./data folder  
+This will spin up the app with the docker-compose.yaml and run the app's start command, which will connect to the MongoDb and and upload the institution and submission data found in the ./data folder.
+
+```bash
+docker-compose down
+```
+
+At any time to stop the application and all running containers
 
 
 ## API Endpoints and Requests
