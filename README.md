@@ -6,6 +6,8 @@ This is a simple Node.js Api allowing user to GET and POST instution data to a m
 
 The focus of this task was not to provide extensive functionality for the API and data manipulation, but to provide a well-tested, standalone app that utilises multiple different technologies including MongoDb and docker to run it. 
 
+You can check the existence of any data by going to the mongo-ui hosted at localhost:8081 and accessing the 'universities' collection
+
 ## Installation and Running
 
 The app is written with Node.js and runs with a docker-compose.yaml file to spin up and maintain the MongoDb and Mongo UI
