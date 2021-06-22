@@ -3,6 +3,8 @@ const helmet = require('helmet');
 const winston = require('winston'),
   expressWinston = require('express-winston');
 
+const { errorHandler } = require('./middleware')
+
 module.exports = (apiRouter) => {
   const app = express();
 
@@ -32,16 +34,7 @@ module.exports = (apiRouter) => {
   app.use('/', apiRouter);
 
   // error handler - app router should pass errors down to here
-  app.use(
-    expressWinston.errorLogger({
-      transports: [
-        new winston.transports.Console({
-          json: true,
-          colorize: true,
-        }),
-      ],
-    })
-  );
+  app.use(errorHandler());
 
   return app;
 };
