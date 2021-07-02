@@ -38,7 +38,7 @@ describe('institute router', () => {
         [[, handler]] = router.get.mock.calls;
       });
 
-      test('it should return the created config to the client', async () => {
+      test('it should return the documents', async () => {
         await handler(req, res, next);
         expect(res.send).toBeCalledWith(['Institute1', 'Institute2']);
       });
